@@ -12,6 +12,8 @@ pipeline {
     
       stage("Build image") {
             steps {
+              echo "testing the environment"
+              sh docker --version
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
                     myapp = docker.build("josecarlosjr/hellowhale")
