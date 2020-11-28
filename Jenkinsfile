@@ -19,6 +19,9 @@ pipeline {
               sh 'ls -la'
               sh 'pwd' 
               sh 'cat /etc/os-release'
+              sh 'apt update'
+              sh 'apt-cache search docker'
+              sh 'docker --version'
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
                     myapp = docker.build("josecarlosjr/hellowhale")
