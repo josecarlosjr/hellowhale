@@ -14,7 +14,7 @@ pipeline {
       stage("Build image") {
             steps {
               echo "testing the environment"
-              sh 'docker --version'
+              //sh 'docker --version'
               sh 'lsb_release -a'
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
