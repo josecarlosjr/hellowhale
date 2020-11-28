@@ -18,9 +18,10 @@ pipeline {
               //sh 'lsb_release -a'
               //sh 'ls -la' mostra os arquivos do worspace
               //sh 'pwd' mostra a raiz do workspace 
-              sh 'cat /etc/os-release'              
-              sh 'sudo apt-get update'
-              sh 'sudo apt-cache search docker'
+              sh 'cat /etc/os-release'
+              sh 'su'
+              sh 'apt-get update'
+              sh 'apt-cache search docker'
               sh 'docker --version'
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
