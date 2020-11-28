@@ -16,11 +16,11 @@ pipeline {
               echo "testing the environment"
               //sh 'docker --version'
               //sh 'lsb_release -a'
-              sh 'ls -la'
-              sh 'pwd' 
-              sh 'cat /etc/os-release'
-              sh 'apt-get update'
-              sh 'apt-cache search docker'
+              //sh 'ls -la' mostra os arquivos do worspace
+              //sh 'pwd' mostra a raiz do workspace 
+              sh 'cat /etc/os-release'              
+              sh 'sudo apt-get update'
+              sh 'sudo apt-cache search docker'
               sh 'docker --version'
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
