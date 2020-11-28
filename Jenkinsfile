@@ -1,7 +1,8 @@
 pipeline {
 
-  agent any
-
+  //agent any
+  agent {label 'kubejenkins'}
+  
   stages {
 
     stage('Checkout Source') {
