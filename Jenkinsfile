@@ -19,7 +19,7 @@ pipeline {
               //sh 'ls -la' mostra os arquivos do worspace
               //sh 'pwd' mostra a raiz do workspace 
               sh 'cat /etc/os-release'
-              sh 'su'
+              sh 'sudo su'
               sh 'apt-get update'
               sh 'apt-cache search docker'
               sh 'docker --version'
