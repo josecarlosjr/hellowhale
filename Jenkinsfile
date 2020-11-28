@@ -18,6 +18,7 @@ pipeline {
               //sh 'lsb_release -a'
               sh 'ls -la'
               sh 'pwd' 
+              sh 'cat /etc/os-release'
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
                     myapp = docker.build("josecarlosjr/hellowhale")
