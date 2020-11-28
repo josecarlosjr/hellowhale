@@ -19,7 +19,7 @@ pipeline {
               sh 'ls -la'
               sh 'pwd' 
               sh 'cat /etc/os-release'
-              sh 'apt update'
+              sh 'apt-get update'
               sh 'apt-cache search docker'
               sh 'docker --version'
                 script {
