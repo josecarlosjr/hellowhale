@@ -18,10 +18,15 @@ pipeline {
               //sh 'lsb_release -a'
               //sh 'ls -la' mostra os arquivos do worspace
               //sh 'pwd' mostra a raiz do workspace 
-              sh 'cat /etc/os-release'
-              sh 'sudo su'
-              sh 'apt-get update'
-              sh 'apt-cache search docker'
+              //sh 'cat /etc/os-release'
+              //sh 'sudo su'
+              //sh 'apt-get update'
+              //sh 'apt-cache search docker'
+              sh 'apk update'
+              sh 'apk add --no-cache'
+              sh 'docker --version'
+              sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
+              sh 'apk add docker-compose'
               sh 'docker --version'
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
