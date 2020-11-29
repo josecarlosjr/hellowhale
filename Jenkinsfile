@@ -30,14 +30,20 @@ pipeline {
               //sh 'apt-cache search docker'
               sh 'apk update'
               sh 'apk add --no-cache'
+              
               //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
               //sh 'apk add docker docker-compose'
-              sh 'apk add openrc docker-openrc '// --no-cache'
-              sh 'rc-update add docker boot'
+              
+              //sh 'apk add openrc docker-openrc '// --no-cache'
+              //sh 'rc-update add docker boot'
+              
               //sh 'rc-service openrc restart'
               //sh 'rc-status -a'
-              sh 'service docker start'
+              
+              //sh 'service docker start'
+              
               //sh 'apt-get install systemd'
+              
               sh 'docker --version'
               //sh 'service docker restart'
              
