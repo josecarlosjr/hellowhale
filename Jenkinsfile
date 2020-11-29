@@ -27,6 +27,7 @@ pipeline {
               sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
               sh 'apk add docker docker-compose'
               sh 'docker --version'
+              sh 'service docker start'
               //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
               //sh 'apk add docker-compose'
               //sh 'docker --version'
