@@ -36,7 +36,7 @@ pipeline {
               //sh 'rc-service openrc restart'
               //sh 'rc-status -a'
               //sh 'rc-service docker restart'
-              sh 'apt-get install systemd'
+              //sh 'apt-get install systemd'
               sh 'docker --version'
               sh 'service docker restart'
              
