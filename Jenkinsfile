@@ -14,7 +14,7 @@ pipeline {
       stage("Build image") {
             steps {
               echo "testing the environment"
-              sh 'docker --version'
+              //sh 'docker --version'
               //sh 'lsb_release -a'
               //sh 'ls -la' mostra os arquivos do worspace
               sh 'pwd' //mostra a raiz do workspace 
@@ -22,8 +22,10 @@ pipeline {
               //sh 'sudo su'
               //sh 'apt-get update'
               //sh 'apt-cache search docker'
-              //sh 'apk update'
-              //sh 'apk add --no-cache'
+              sh 'apk update'
+              sh 'apk add --no-cache'
+              sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
+              sh 'apk add docker-compose'
               sh 'docker --version'
               //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
               //sh 'apk add docker-compose'
