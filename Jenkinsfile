@@ -25,7 +25,7 @@ pipeline {
               sh 'apk update'
               sh 'apk add --no-cache'
               sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
-              sh 'apk add docker-compose'
+              sh 'apk add docker docker-compose'
               sh 'docker --version'
               //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
               //sh 'apk add docker-compose'
