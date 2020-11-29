@@ -15,24 +15,26 @@ pipeline {
             steps {
               echo "testing the environment"
               //sh 'docker --version'
-              //sh 'lsb_release -a'
+              sh 'lsb_release -a'
               //sh 'ls -la' mostra os arquivos do worspace
               sh 'pwd' //mostra a raiz do workspace 
               sh 'cat /etc/os-release'
               //sh 'sudo su'
-              //sh 'apt-get update'
+              sh 'apt-get update'
+              sh 'apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common'
+              sh 'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -'
+              sh 'add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"'
+              sh 'apt-get update'
+              sh 'apt-get install docker-ce docker-ce-cli'
               //sh 'apt-cache search docker'
-              sh 'apk update'
-              sh 'apk add --no-cache'
-              sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
-              sh 'apk add docker docker-compose'
-              sh 'apk add openrc --no-cache'
+              //sh 'apk update'
+              //sh 'apk add --no-cache'
+              //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
+              //sh 'apk add docker docker-compose'
+              //sh 'apk add openrc --no-cache'
               //sh 'rc-service'              
               sh 'docker --version'
-              //sh 'service docker start'
-              //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
-              //sh 'apk add docker-compose'
-              //sh 'docker --version'
+             
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
                     myapp = docker.build("josecarlosjr/hellowhale")
