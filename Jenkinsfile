@@ -20,6 +20,7 @@ pipeline {
               sh 'pwd' //mostra a raiz do workspace 
               sh 'cat /etc/os-release'
               //sh 'sudo su'
+              sh 'timedatectl'
               sh 'apt-get update'
               sh 'apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common'
               sh 'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -'
