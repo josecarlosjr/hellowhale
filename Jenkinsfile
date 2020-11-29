@@ -37,6 +37,7 @@ pipeline {
               //sh 'rc-status -a'
               //sh 'rc-service docker restart'
               sh 'docker --version'
+              sh 'systemctl restart docker'
              
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
