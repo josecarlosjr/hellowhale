@@ -33,6 +33,7 @@ pipeline {
               //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
               sh 'apk add docker docker-compose'
               sh 'apk add openrc --no-cache'
+              sh 'rc-service openrc restart'
               sh 'rc-status -a'
               sh 'rc-service docker restart'
               sh 'docker --version'
