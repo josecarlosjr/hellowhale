@@ -18,7 +18,7 @@ pipeline {
               //sh 'lsb_release -a'
               //sh 'ls -la' mostra os arquivos do worspace
               //sh 'pwd' //mostra a raiz do workspace 
-              //sh 'cat /etc/os-release'
+              sh 'cat /etc/os-release'
               //sh 'sudo su'
               //sh 'hwclock --hctosys'//sh 'timedatectl'              
               
