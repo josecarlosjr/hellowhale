@@ -41,8 +41,8 @@ pipeline {
               //sh 'apt-get install systemd'
               //sh 'ps -aux | grep docker'
               //sh 'docker --version'
-              sh 'service docker start'
-              sh 'dockerd'
+              sh 'service docker reload'
+              //sh 'dockerd'
              
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
