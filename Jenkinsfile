@@ -40,8 +40,8 @@ pipeline {
               //sh 'rc-update add docker boot'              
               //sh 'rc-service openrc restart'
               //sh 'rc-status -a'
-              sh 'openrc default'
-              sh 'rc-update add docker boot'
+              //sh 'openrc default'
+              sh 'rc-update add docker default'
               sh 'rc-service docker start'
               //sh 'apt-get install systemd'
               
