@@ -42,8 +42,7 @@ pipeline {
               //sh 'rc-status -a'
               //sh 'openrc default'
               sh 'rc-update add docker default'              
-              sh 'rc-service -I docker restart'
-              sh 'find / -type f -iname docker.sock'
+              //sh 'rc-service -I docker restart'              
              
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
