@@ -32,16 +32,16 @@ pipeline {
               //sh 'apt-get update'
               //sh 'apt-get install -y docker-ce'// docker-ce-cli'
               
-              //sh 'apk update'
-              //sh 'apk add --no-cache'              
-              //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
-              //sh 'apk add openrc docker docker-compose'              
+              sh 'apk update'
+              sh 'apk add --no-cache'              
+              sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
+              sh 'apk add openrc docker docker-compose'              
               //sh 'apk add openrc docker-openrc '// --no-cache'
               //sh 'rc-update add docker boot'              
               //sh 'rc-service openrc restart'
               //sh 'rc-status -a'
               //sh 'openrc default'
-              //sh 'rc-update add docker default'              
+              sh 'rc-update add docker default'              
               //sh 'rc-service -I docker restart'              
              
                 script {
