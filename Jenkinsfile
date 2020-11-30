@@ -32,7 +32,7 @@ pipeline {
               //sh 'apt-get update'
               //sh 'apt-get install -y docker-ce'// docker-ce-cli'
               
-              sh 'apk update'
+              //sh 'apk update'
               //sh 'apk add --no-cache'              
               //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
               //sh 'apk add openrc docker docker-compose'              
