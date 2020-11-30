@@ -42,7 +42,8 @@ pipeline {
               //sh 'rc-status -a'
               //sh 'openrc default'
               sh 'rc-update add docker default'
-              sh 'rc-service docker start'
+              sh 'rc-status'
+              sh 'rc-service -I docker restart'
               //sh 'apt-get install systemd'
               
               //sh 'docker --version'              
