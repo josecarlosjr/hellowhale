@@ -42,6 +42,7 @@ pipeline {
               //sh 'ps -aux | grep docker'
               //sh 'docker --version'
               sh 'service docker start'
+              sh 'dockerd'
              
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
