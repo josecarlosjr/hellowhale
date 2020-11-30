@@ -30,19 +30,14 @@ pipeline {
               sh 'apt-get install -y docker-ce'// docker-ce-cli'
               //sh 'apt-cache search docker'
               //sh 'apk update'
-              //sh 'apk add --no-cache'
-              
+              //sh 'apk add --no-cache'              
               //sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
-              //sh 'apk add docker docker-compose'
-              
+              //sh 'apk add docker docker-compose'              
               //sh 'apk add openrc docker-openrc '// --no-cache'
-              //sh 'rc-update add docker boot'
-              
+              //sh 'rc-update add docker boot'              
               //sh 'rc-service openrc restart'
-              //sh 'rc-status -a'
-              
-              //sh 'service docker start'
-              
+              //sh 'rc-status -a'              
+              //sh 'service docker start'              
               //sh 'apt-get install systemd'
               //sh 'ps -aux | grep docker'
               //sh 'docker --version'
