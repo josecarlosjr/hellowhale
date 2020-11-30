@@ -37,12 +37,10 @@ pipeline {
               //sh 'rc-update add docker boot'              
               //sh 'rc-service openrc restart'
               //sh 'rc-status -a'              
-              //sh 'service docker start'              
+              sh '/etc/init.d/docker restart'
               //sh 'apt-get install systemd'
-              //sh 'ps -aux | grep docker'
-              //sh 'docker --version'
-              sh 'service docker reload'
-              //sh 'dockerd'
+              
+              //sh 'docker --version'              
              
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
