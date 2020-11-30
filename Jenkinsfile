@@ -45,7 +45,7 @@ pipeline {
               
               //sh 'apt-get install systemd'
               //sh 'ps -aux | grep docker'
-              sh 'docker --version'
+              //sh 'docker --version'
               //sh 'service docker restart'
              
                 script {
