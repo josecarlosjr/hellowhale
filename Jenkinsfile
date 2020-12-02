@@ -1,7 +1,40 @@
 pipeline {
-
   //agent any
-  agent {label 'kubejenkins'}
+  //agent {label 'kubejenkins'}
+  
+  agent {
+    kubernetes {
+      yaml """
+                apiVersion: v1
+                kind: Pod
+                metadata:
+                  labels:
+                    label: jnlp
+                spec:
+                  securityContext:
+                    runAsUser: 0
+                  containers:
+                  - name: jnlp
+                    image: jenkins/inbound-agent:alpine
+                    resources:
+                      requests:
+                        memory: "512Mi"
+                        cpu: "100m"
+                        ephemeral-storage: "1Gi"
+                      limits:
+                        memory: "1Gi"
+                        cpu: "500m"
+                        ephemeral-storage: "2Gi"
+                    volumeMounts:
+                    - name: dockersock
+                      mountPath: "/var/run/docker.sock"
+                  volumes:
+                  - name: dockersock
+                    hostPath:
+                      path: /var/run/docker.sock
+                """
+    }
+  } 
   
   stages {
 
