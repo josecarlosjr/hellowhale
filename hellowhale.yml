@@ -7,7 +7,7 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-whale-app
+      app: hello-blue-whale
       version: blue
   template:
     metadata:
@@ -34,11 +34,11 @@ spec:
   selector:
     app: hello-blue-whale
     version: blue
-  #type: ClusterIP
-  type: NodePort
+  type: ClusterIP
+  #type: NodePort
   ports:
-  - nodePort: 31113
-    port: 80
+  #- nodePort: 31113
+  - port: 80
     targetPort: 80
     #protocol: TCP
   selector:
