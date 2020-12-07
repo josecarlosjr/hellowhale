@@ -11,9 +11,9 @@ spec:
       version: blue
   template:
     metadata:
-      name: hello-blue-whale-pod
+      name: hello-blue-whale
       labels:
-        app: hello-whale-app
+        app: hello-blue-whale
         version: blue
     spec:
       containers:
@@ -28,16 +28,19 @@ kind: Service
 metadata:
   name: hello-whale-svc
   labels:
-    app: hello-whale-app
+    app: hello-blue-whale
 spec:
   selector:
-    app: hello-whale-app
+    app: hello-blue-whale
     version: blue
   type: ClusterIP
   ports:
   #- nodePort: 31113
   - port: 80
     targetPort: 80
+     protocol: TCP
+  selector:
+    app: hello-blue-whale
 #---
 #apiVersion: networking.k8s.io/v1beta1
 #kind: Ingress
