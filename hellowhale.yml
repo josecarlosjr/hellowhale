@@ -29,6 +29,7 @@ metadata:
   name: hello-whale-svc
   labels:
     app: hello-blue-whale
+    service: hello-blue-whale
 spec:
   selector:
     app: hello-blue-whale
