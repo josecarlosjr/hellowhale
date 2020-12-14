@@ -51,7 +51,11 @@ metadata:
   #annotations:
   #  kubernetes.io/ingress.class: nginx
   #  nginx.ingress.kubernetes.io/rewrite-target: /
-spec:
+spec:  
+  tls:
+  - hosts:
+      - hello-blue-whale
+    secretName: proxy-ca-secret
   rules:
   - host: hello-blue-whale
     http:
