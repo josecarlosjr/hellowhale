@@ -41,8 +41,8 @@ spec:
   #type: NodePort
   ports:
   #- nodePort: 31113
-  - port: 8080
-    targetPort: 8080
+  - port: 80
+    targetPort: 80
     protocol: TCP
     name: http
   - port: 443
@@ -78,7 +78,7 @@ spec:
         #pathType: Prefix
         backend:
           serviceName: hello-whale-svc
-          servicePort: 8080
+          servicePort: 80
           servicePort: 443
 
 
