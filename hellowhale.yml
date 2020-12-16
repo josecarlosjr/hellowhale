@@ -45,11 +45,11 @@ spec:
     targetPort: 80
     protocol: TCP
     name: http
-  #- port: 443
-  #  targetPort: 443
-  #  protocol: TCP
-  #  name: https
-    #protocol: TCP
+  - port: 443
+    targetPort: 443
+    protocol: TCP
+    name: https
+    protocol: TCP
   selector:
     app: hello-blue-whale
 ---
@@ -79,6 +79,6 @@ spec:
         backend:
           serviceName: hello-whale-svc
           servicePort: 80
-          #servicePort: 443
+          servicePort: 443
 
 
