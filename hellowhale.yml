@@ -21,7 +21,7 @@ spec:
         image: vamsijakkula/hellowhale:latest
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           #hostPort: 80
         #- containerPort: 443
         #  hostPort: 443
@@ -41,8 +41,8 @@ spec:
   #type: NodePort
   ports:
   #- nodePort: 31113
-  - port: 80
-    targetPort: 80
+  - port: 8080
+    targetPort: 8080
     protocol: TCP
     name: http
   - port: 443
@@ -78,7 +78,7 @@ spec:
         #pathType: Prefix
         backend:
           serviceName: hello-whale-svc
-          servicePort: 80
+          servicePort: 8080
           servicePort: 443
 
 
