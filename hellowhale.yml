@@ -63,6 +63,8 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  labels:
+    app: hello-blue-whale
 spec:  
   tls:
   - hosts:
