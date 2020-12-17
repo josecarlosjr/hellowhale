@@ -19,7 +19,15 @@ spec:
       containers:
       - name: hello-whale-container
         image: vamsijakkula/hellowhale:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: IfNotPresent#resources:
+        requests:
+          memory: "256Mi"
+          cpu: "100m"
+          #ephemeral-storage: "1Gi"
+        limits:  
+          memory: "400Mi"
+          cpu: "300m"
+          #ephemeral-storage: "2Gi"        
         ports:
         - containerPort: 8080
           #hostPort: 80
