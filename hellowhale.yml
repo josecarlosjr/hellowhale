@@ -30,7 +30,7 @@ spec:
             cpu: "300m"
             #ephemeral-storage: "2Gi"        
         ports:
-        - containerPort: 8080
+        - containerPort: 80
           #hostPort: 80
         #- containerPort: 443
         #  hostPort: 443
@@ -51,7 +51,7 @@ spec:
   ports:
   #- nodePort: 31113
   - port: 80
-    targetPort: 8080
+    targetPort: 80
     protocol: TCP
     name: http
   - port: 443
@@ -87,7 +87,7 @@ spec:
         #pathType: Prefix
         backend:
           serviceName: hello-whale-svc
-          servicePort: 8080
+          servicePort: 80
           servicePort: 443
 
 
