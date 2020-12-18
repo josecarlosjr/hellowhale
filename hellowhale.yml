@@ -64,32 +64,32 @@ spec:
   selector:
     app: hello-blue-whale
 ---
-#apiVersion: networking.k8s.io/v1beta1
-#kind: Ingress
-#metadata:
-#  name: hello-whale-ingress
-#  annotations:  
-#    nginx.ingress.kubernetes.io/rewrite-target: /  
-#    kubernetes.io/ingress.class: nginx
-#    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-#    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-#    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-#  #labels:
-#  #  app: hello-blue-whale
-#spec:  
-#  tls:
-#  - hosts:
-#      - hello-blue-whale
-#    secretName: proxy-ca-secret
-#  rules:
-#  - host: hello-blue-whale
-#    http:
-#      paths:
-#      - path: /
-#        #pathType: Prefix
-#        backend:
-#          serviceName: hello-whale-svc
-#          servicePort: 8080
-#          servicePort: 8081
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: hello-whale-ingress
+  annotations:  
+    nginx.ingress.kubernetes.io/rewrite-target: /  
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  #labels:
+  #  app: hello-blue-whale
+spec:  
+  tls:
+  - hosts:
+      - hello-blue-whale
+    secretName: proxy-ca-secret
+  rules:
+  - host: hello-blue-whale
+    http:
+      paths:
+      - path: /
+        #pathType: Prefix
+        backend:
+          serviceName: hello-whale-svc
+          servicePort: 8080
+          servicePort: 8081
 
 
