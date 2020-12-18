@@ -30,8 +30,8 @@ spec:
         #    cpu: "300m"
             #ephemeral-storage: "2Gi"        
         ports:
-        - containerPort: 80
-          hostPort: 80
+        - containerPort: 8080
+          hostPort: 8080
         #- containerPort: 80
         #- hostPort: 80
         #- containerPort: 443
@@ -55,7 +55,7 @@ spec:
     #port exposta internamente no cluster porta do POD
   - port: 80
     #targetPort == servicePort acessado no browser
-    targetPort: 80 
+    targetPort: 8080 
     protocol: TCP
     name: http
   - port: 443
@@ -91,7 +91,7 @@ spec:
         #pathType: Prefix
         backend:
           serviceName: hello-whale-svc
-          servicePort: 80
+          servicePort: 8080
           servicePort: 8081
 
 
