@@ -8,13 +8,13 @@ spec:
   selector:
     matchLabels:
       app: hello-blue-whale
-      version: blue
+      #version: blue
   template:
     metadata:
       name: hello-blue-whale
       labels:
         app: hello-blue-whale
-        version: blue
+        #version: blue
     spec:
       containers:
       - name: hello-whale-container
@@ -31,7 +31,7 @@ spec:
             #ephemeral-storage: "2Gi"        
         ports:
         - containerPort: 80
-          #hostPort: 80
+          hostPort: 8080
         #- containerPort: 443
         #  hostPort: 443
 ---
@@ -45,17 +45,19 @@ metadata:
 spec:
   selector:
     app: hello-blue-whale
-    version: blue
+    #version: blue
   type: ClusterIP
   #type: NodePort
   ports:
   #- nodePort: 31113
+    #port exposta internamente no cluster porta do POD
   - port: 80
-    targetPort: 80
+    #targetPort == servicePort acessado no browser
+    targetPort: 8080 
     protocol: TCP
     name: http
   - port: 443
-    targetPort: 443
+    targetPort: 8081
     protocol: TCP
     name: https
     protocol: TCP
@@ -87,7 +89,7 @@ spec:
         #pathType: Prefix
         backend:
           serviceName: hello-whale-svc
-          servicePort: 80
-          servicePort: 443
+          servicePort: 8080
+          servicePort: 8081
 
 
