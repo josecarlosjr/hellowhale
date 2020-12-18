@@ -14,7 +14,7 @@ spec:
       name: hello-blue-whale
       labels:
         app: hello-blue-whale
-        #version: blue
+        version: blue
     spec:
       containers:
       - name: hello-whale-container
@@ -45,7 +45,7 @@ metadata:
 spec:
   selector:
     app: hello-blue-whale
-    #version: blue
+    version: blue
   type: ClusterIP
   #type: NodePort
   ports:
