@@ -1,6 +1,7 @@
 FROM nginx
 
-RUN apt-get update && apt-get install net-tools
+RUN apt-get update && apt-get install net-tools apt-transport-https ca-certificates curl gnupg-agent \
+    software-properties-common
 
 COPY wrapper.sh /
 
