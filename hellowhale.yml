@@ -30,8 +30,8 @@ spec:
         #    cpu: "300m"
             #ephemeral-storage: "2Gi"        
         ports:
-        - containerPort: 80
-          hostPort: 80
+        - containerPort: 8080
+          hostPort: 8080
         #- containerPort: 80
         #- hostPort: 80
         #- containerPort: 443
@@ -53,7 +53,7 @@ spec:
   ports:
   #- nodePort: 31113
     #port exposta internamente no cluster porta do POD
-  - port: 80
+  - port: 8080
     #targetPort == servicePort acessado no browser
     targetPort: 8080 
     protocol: TCP
