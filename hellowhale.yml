@@ -18,7 +18,8 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: vamsijakkula/hellowhale:latest
+        #image: vamsijakkula/hellowhale:latest
+        image: josecarlosjr/hellowhale:latest
         imagePullPolicy: IfNotPresent
         #resources:
         #  requests:
