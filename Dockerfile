@@ -1,6 +1,6 @@
 FROM nginx
 
-RUN apt-get update && apt-get install -y apt-transport-https gnupg-agent software-properties-common
+RUN apt-get update && apt-get install -y apt-transport-https software-properties-common
 
 RUN apt-get install -y vim net-tools
 
