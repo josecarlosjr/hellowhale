@@ -16,15 +16,15 @@ spec:
         app: hello-blue-whale
         version: blue    
     spec:
-      #affinity:
-      #  nodeAffinity:
-      #    requiredDuringSchedulingIgnoredDuringExecution:
-      #      nodeSelectorTerms:
-      #      - matchExpressions:
-      #        - key: Labels
-      #          operator: In
-      #          values:
-      #          - kubernetes.io/hostname=n0d3-2
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: Labels
+                operator: In
+                values:
+                - kubernetes.io/hostname=n0d3-2
       containers:
       - name: hello-whale-container
         #image: vamsijakkula/hellowhale:latest
