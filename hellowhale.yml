@@ -21,10 +21,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: kubernetes.io/hostname
+              - key: Labels
                 operator: In
                 values:
-                - n0d3-2
+                - kubernetes.io/hostname=n0d3-2
       containers:
       - name: hello-whale-container
         #image: vamsijakkula/hellowhale:latest
