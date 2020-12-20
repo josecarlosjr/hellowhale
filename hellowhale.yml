@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-blue-whale
-#spec:  
+spec:  
   replicas: 1
   selector:
     matchLabels:
@@ -16,32 +16,32 @@ metadata:
         app: hello-blue-whale
         version: blue    
     spec:
-      containers:
-      - name: hello-whale-container
-        #image: vamsijakkula/hellowhale:latest
-        image: josecarlosjr/hellowhale:latest
-        imagePullPolicy: IfNotPresent
-        #resources:
-        #  requests:
-        #    memory: "128Mi"
-        #    cpu: "100m"
-            #ephemeral-storage: "1Gi"
-        #  limits:  
-        #    memory: "300Mi"
-        #    cpu: "300m"
-            #ephemeral-storage: "2Gi"        
-        ports:
-        - containerPort: 8080
-          hostPort: 80
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: kubernetes.io/name
+              - key: kubernetes.io/hostname
                 operator: In
                 values:
                 - n0d3-2
+      containers:
+      - name: hello-whale-container
+        #image: vamsijakkula/hellowhale:latest
+        image: josecarlosjr/hellowhale:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+            ephemeral-storage: "100Mi"
+          limits:  
+            memory: "300Mi"
+            cpu: "300m"
+            ephemeral-storage: "250Mi"        
+        ports:
+        - containerPort: 8080
+          hostPort: 80     
         #- containerPort: 80
         #- hostPort: 80
         #- containerPort: 443
