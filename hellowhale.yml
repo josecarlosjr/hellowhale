@@ -88,11 +88,11 @@ kind: Ingress
 metadata:
   name: hello-whale-ingress
   annotations:  
-    #nginx.ingress.kubernetes.io/rewrite-target: /  
+    nginx.ingress.kubernetes.io/rewrite-target: /  
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    #nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    #nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    #nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
   #labels:
   #  app: hello-blue-whale
 spec:  
