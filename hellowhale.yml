@@ -99,7 +99,7 @@ spec:
   tls:
   - hosts:
       - hello-blue-whale
-    secretName: client-cat
+    secretName: client-ca
   rules:
   - host: hello-blue-whale
     http:
