@@ -78,7 +78,7 @@ spec:
     protocol: TCP
     name: http
   - port: 443
-    targetPort: 443
+    targetPort: 8081
     protocol: TCP
     name: https
     protocol: TCP
@@ -111,4 +111,4 @@ spec:
         backend:
           serviceName: hello-whale-svc
           servicePort: 8080
-          servicePort: 443
+          servicePort: 8081
