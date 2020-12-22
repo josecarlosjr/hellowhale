@@ -53,8 +53,8 @@ spec:
           mountPath: /etc/nginx
       volumes:
         - name: ssl
-        secret:
-          secretName: client-ca
+          secret:
+            secretName: client-ca
 ---
 apiVersion: v1
 kind: Service 
