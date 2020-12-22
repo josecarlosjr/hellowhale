@@ -48,6 +48,13 @@ spec:
           hostPort: 443
         #- containerPort: 443
         #  hostPort: 443
+        volumeMounts:
+          - name: ssl
+          mountPath: /etc/nginx
+      volumes:
+        - name: ssl
+        secret:
+          secretName: client-ca
 ---
 apiVersion: v1
 kind: Service 
