@@ -42,9 +42,9 @@ spec:
             cpu: "200m"
             ephemeral-storage: "250Mi"        
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           hostPort: 80     
-        - containerPort: 443
+        - containerPort: 8081
           hostPort: 443
         #- containerPort: 443
         #  hostPort: 443
