@@ -99,7 +99,7 @@ spec:
   tls:
   - hosts:
       - hello-blue-whale
-    secretName: proxy-ca-secret
+    secretName: client-cat
   rules:
   - host: hello-blue-whale
     http:
