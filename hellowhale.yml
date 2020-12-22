@@ -42,19 +42,18 @@ spec:
             cpu: "200m"
             ephemeral-storage: "250Mi"        
         ports:
-        - containerPort: 8080
-        #  hostPort: 8080     
-        - containerPort: 8081
+        - containerPort: 8080             
+          containerPort: 8081
         #  hostPort: 8081
         #- containerPort: 443
         #  hostPort: 443
-        volumeMounts:
-          - name: ssl
-            mountPath: /etc/nginx
-      volumes:
-        - name: ssl
-          secret:
-            secretName: client-ca
+        #volumeMounts:
+        #  - name: ssl
+        #    mountPath: /etc/nginx
+      #volumes:
+      #  - name: ssl
+      #    secret:
+      #      secretName: client-ca
 ---
 apiVersion: v1
 kind: Service 
