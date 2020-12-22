@@ -50,7 +50,7 @@ spec:
         #  hostPort: 443
         volumeMounts:
           - name: ssl
-          mountPath: /etc/nginx
+            mountPath: /etc/nginx
       volumes:
         - name: ssl
           secret:
