@@ -43,7 +43,7 @@ spec:
             ephemeral-storage: "250Mi"        
         ports:
         - containerPort: 8080             
-          #containerPort: 8081
+          #containerPort: 8085
         #  hostPort: 8081
         #- containerPort: 443
         #  hostPort: 443
@@ -76,10 +76,10 @@ spec:
     targetPort: 8080 
     protocol: TCP
     name: http
-  #- port: 443
-  #  targetPort: 8081
-  #  protocol: TCP
-  #  name: https    
+  - port: 8084
+    targetPort: 8080
+    protocol: TCP
+    name: https    
   selector:
     app: hello-blue-whale
 ---
