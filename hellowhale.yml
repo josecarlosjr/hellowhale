@@ -42,14 +42,10 @@ spec:
             cpu: "200m"
             ephemeral-storage: "250Mi"        
         ports:
-        - containerPort: 8080             
-          #containerPort: 8085
-        #  hostPort: 8081
-        #- containerPort: 443
-        #  hostPort: 443
+        - containerPort: 8080
         volumeMounts:
           - name: ssl
-            mountPath: /etc/nginx
+            mountPath: /etc/nginx/
       volumes:
         - name: ssl
           secret:
