@@ -45,7 +45,7 @@ spec:
         - containerPort: 8080
         volumeMounts:
           - name: ssl
-            mountPath: /etc/nginx/
+            mountPath: /etc/nginx/ssl
       volumes:
         - name: ssl
           secret:
