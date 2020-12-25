@@ -43,6 +43,7 @@ spec:
             ephemeral-storage: "250Mi"        
         ports:
         - containerPort: 8080
+          containerPort: 443
         volumeMounts:
           - name: ssl
             mountPath: /etc/nginx/client/
@@ -72,8 +73,8 @@ spec:
     targetPort: 8080 
     protocol: TCP
     name: http
-  - port: 8084
-    targetPort: 8080
+  - port: 443
+    targetPort: 443
     protocol: TCP
     name: https    
   selector:
