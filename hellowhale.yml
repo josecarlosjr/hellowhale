@@ -42,7 +42,7 @@ spec:
             cpu: "200m"
             ephemeral-storage: "250Mi"        
         ports:
-        - containerPort: 8080
+        - containerPort: 80
           containerPort: 443
         volumeMounts:
           - name: ssl
@@ -68,9 +68,9 @@ spec:
   ports:
   #- nodePort: 31113
     #port exposta internamente no cluster porta do POD
-  - port: 8083
+  - port: 8080
     #targetPort == servicePort acessado no browser
-    targetPort: 8080 
+    targetPort: 80 
     protocol: TCP
     name: http
   - port: 443
