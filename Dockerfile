@@ -1,8 +1,9 @@
 FROM nginx:1.19.6-alpine
 
-RUN apt-get update && apt-get install -y apt-transport-https software-properties-common
+#RUN apt-get update && apt-get install -y apt-transport-https software-properties-common
+RUN apk update && apk add -y apt-transport-https software-properties-common
 
-RUN apt-get install -y vim net-tools
+#RUN apt-get install -y vim net-tools
 
 RUN rm /etc/nginx/nginx.conf
 
