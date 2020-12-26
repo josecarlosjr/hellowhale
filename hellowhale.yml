@@ -50,7 +50,7 @@ spec:
       volumes:
         - name: ssl
           secret:
-            secretName: proxy-ca-secret
+            secretName: client-ca
 ---
 apiVersion: v1
 kind: Service 
