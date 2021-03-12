@@ -19,12 +19,10 @@ pipeline {
                     resources:
                       requests:
                         memory: "512Mi"
-                        cpu: "100m"
-                        ephemeral-storage: "1Gi"
+                        cpu: "100m"                       
                       limits:
                         memory: "1Gi"
                         cpu: "500m"
-                        ephemeral-storage: "2Gi"
                     volumeMounts:
                     - name: dockersock
                       mountPath: "/var/run/docker.sock"
@@ -35,7 +33,7 @@ pipeline {
                 """
     }
   } 
-  
+  // ephemeral-storage: "1Gi"
   stages {
 
     stage('Checkout Source') {
