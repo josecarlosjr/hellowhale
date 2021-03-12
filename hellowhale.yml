@@ -39,8 +39,8 @@ spec:
             ephemeral-storage: "100Mi"
           limits:  
             memory: "200Mi"
-            cpu: "200m"
-            ephemeral-storage: "250Mi"        
+            cpu: "150m"
+            ephemeral-storage: "150Mi"        
         ports:
         - containerPort: 80
         - containerPort: 443
