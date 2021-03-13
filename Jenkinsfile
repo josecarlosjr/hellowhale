@@ -48,7 +48,7 @@ pipeline {
               sh 'cat /etc/os-release'      
               sh 'apk update'
               sh 'apk add --no-cache'              
-              sh 'apk add py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make'
+              sh 'apk add libffi-dev openssl-dev gcc libc-dev make'
               sh 'apk add openrc docker docker-compose'   
               sh 'rc-update add docker default'              
               //sh 'rc-service -I docker restart'              
@@ -76,7 +76,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "config", deleteResource: true)
+          //kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "config", deleteResource: true)
           kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "config")
         }
       }
