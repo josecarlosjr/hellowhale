@@ -27,8 +27,8 @@ spec:
       #          operator: In
       #          values:
       #          - kubernetes.io/hostname=n0d3-2
-      nodeSelector:
-        kubernetes.io/hostname: n0d3-2
+      #nodeSelector:
+      #  kubernetes.io/hostname: n0d3-2
       containers:
       - name: hello-whale-container
         #image: vamsijakkula/hellowhale:latest
