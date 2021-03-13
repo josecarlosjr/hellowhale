@@ -77,7 +77,7 @@ pipeline {
       steps {
         script {
           //kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "config", deleteResource: true)
-          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId:"config")
+          kubernetesDeploy(configs: "hellowhale.yml")
         }
       }
     }
