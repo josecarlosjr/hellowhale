@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1.19.8
 
 RUN apt-get update && apt-get install -y apt-transport-https software-properties-common tcptraceroute
 #RUN apk update 
