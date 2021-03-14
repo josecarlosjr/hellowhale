@@ -76,8 +76,8 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "namespace.yaml", kubeconfigId: "kubeconfig", deleteResource: true)
-          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "kubeconfig", deleteResource: true)
+          //kubernetesDeploy(configs: "namespace.yaml", kubeconfigId: "kubeconfig", deleteResource: true)
+          //kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "kubeconfig", deleteResource: true)
           kubernetesDeploy(configs: "namespace.yaml", kubeconfigId: "kubeconfig")
           kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "kubeconfig")
         }
